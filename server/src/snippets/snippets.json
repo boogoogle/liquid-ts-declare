@@ -159,9 +159,9 @@
     "body": ["{% javascript %}", "\t$1", "{% endjavascript %}"]
   },
   "Tag comment, whitespaced": {
-    "prefix": "comment-",
+    "prefix": "comment",
     "description": "Comment tag: comment, whitespaced",
-    "body": ["{%- comment -%}$1{%- endcomment -%}"]
+    "body": ["{% comment %}$1{% endcomment %}"]
   },
   "Tag if, whitespaced": {
     "prefix": "if-",
