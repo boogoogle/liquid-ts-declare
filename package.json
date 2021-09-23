@@ -1,7 +1,7 @@
 {
 	"name": "ts-declare-liquid",
 	"displayName": "ts-declare-liquid",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "one lib for ts declare in liquid.you can use auto comletion use this lib",
 	"icon": "images/icon.png",
 	"publisher": "liquid-ts-declare",
@@ -34,7 +34,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage:plaintext",
 		"onLanguage:liquid"
 	],
 	"main": "./client/out/extension",
