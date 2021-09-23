@@ -1,6 +1,6 @@
 const NAME_SPECE: any = {};
 function getMembers(data: any, target: any) {
-  for (let j = 0; j < data.length; j += 1) {
+  for (let j = 0; data && j < data.length; j += 1) {
     const current = data[j];
     if(!current || ! current.name)return;
     const name = current.name.escapedText;
@@ -25,7 +25,7 @@ function getMembers(data: any, target: any) {
   }
 }
 function getNameSpace(data: any[]) {
-  for (let i = 0; i < data.length; i += 1) {
+  for (let i = 0; i < data.length; i++) {
     const current = data[i].compilerNode;
     const currentName = current.name.escapedText;
     if (!NAME_SPECE[currentName]) {

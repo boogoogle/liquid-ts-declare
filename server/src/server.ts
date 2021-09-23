@@ -93,6 +93,7 @@ connection.onInitialize((params: InitializeParams) => {
 });
 
 connection.onInitialized(async() => {
+	console.log('connection onInitialized');
 	if (hasConfigurationCapability) {
 		// Register for all configuration changes.
 		connection.client.register(DidChangeConfigurationNotification.type, undefined);
@@ -102,7 +103,7 @@ connection.onInitialized(async() => {
 			connection.console.log('Workspace folder change event received.');
 		});
 	}
-	collectProjectDTS(connection);
+	// collectProjectDTS(connection);
 });
 
 // The example settings

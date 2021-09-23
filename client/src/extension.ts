@@ -15,7 +15,7 @@ function init() {
 	if (wfArr && wfArr[0]) {
 		const curWf = wfArr[0].uri.fsPath;
 		const project = new Project();
-		const files = project.addSourceFilesAtPaths([`${curWf}/types/**/*.d.ts`]);
+		const files = project.addSourceFilesAtPaths([`${curWf}/types/**/*.d.ts`, `${curWf}/src/**/*.d.ts` ]);
 		NAME_SPECE = getNameSpaceObjByFile(files);
 	}
 }
@@ -42,6 +42,7 @@ export function activate(context: ExtensionContext) {
 	const Provier = new Provider(ns);
 	const provider = Provier.getProvider();
 	context.subscriptions.push(provider);
+	window.showInformationMessage('Liquid-With-TS plugin actived');
 
 
 
